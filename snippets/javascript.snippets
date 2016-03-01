@@ -1,0 +1,76 @@
+# Function
+snippet fun
+	function ${1:function_name}(${2}) {
+		${0}
+	}
+
+# Function assigned to variable
+snippet funv Function is assigned to variable
+	var ${1:function_name} = function $1(${2}) {
+		${0}
+	};
+
+# Immediate function
+snippet (f
+	(function(${1}) {
+		${0}
+	}(${2}));
+
+# Flow control
+
+# if
+snippet if
+	if (${1:true}) {
+		${0}
+	}
+# if ... else
+snippet ife
+	if (${1:true}) {
+		${2}
+	} else {
+		${0}
+	}
+
+# try
+snippet try
+	try {
+		${1}
+	} catch (${2:e}) {
+		${0:/* handle error */}
+	}
+# try finally
+snippet tryf
+	try {
+		${1}
+	} catch (${2:e}) {
+		${0:/* handle error */}
+	} finally {
+		${3:/* be executed regardless of the try / catch result*/}
+	}
+# switch
+snippet switch
+	switch (${1:expression}) {
+		case '${3:case}':
+			${4}
+			break;
+		${0}
+		default:
+			${2}
+	}
+
+# Debugging
+snippet de
+	debugger;
+# console.log
+snippet cl
+	console.log(${0});
+
+# Misc
+
+# 'use strict';
+snippet us
+	'use strict';
+
+# setTimeout function
+snippet timeout
+	setTimeout(function () {${0}}${2}, ${1:1000});
